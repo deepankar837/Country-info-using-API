@@ -25,7 +25,7 @@ fetch('https://restcountries.com/v3.1/all')
         countriesContainer.append(countryCard)
     })
   })
-  // themeChanger.addEventListener('click', () => {
-  //   document.body.classList.toggle('dark')
-  // })
+  themeChanger.addEventListener('click', () => {
+    document.body.classList.toggle('dark')
+   })
 
