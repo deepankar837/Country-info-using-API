@@ -1,10 +1,15 @@
+
+
+
+
+
+
 * {
     box-sizing: border-box;
-    
 }
 
 body {
-    --background-color: white;
+    --background-color: cornsilk;
     --text-color: black;
     --elements-color: white;
     margin: 0;
@@ -44,6 +49,9 @@ a {
 
 .title {
     font-weight: 800;
+    font-family:'Love Ya Like A Sister', sans-serif;
+    
+    
 }
 
 .theme-changer {
@@ -91,4 +99,75 @@ a {
 
 .country-card img {
     width: 100%;
+}
+
+
+.search-filter-container {
+    max-width: 1200px;
+    margin-inline: auto;
+    margin-top: 16px;
+    margin-bottom: 48px;
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.search-container {
+    box-shadow: 0 0 8px 0px rgb(0 0 0 / 15%);
+    max-width: 350px;
+    width: 100%;
+    border-radius: 4px;
+    padding-left: 24px;
+    color: #999;
+    overflow: hidden;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    border-radius: 38px;
+}
+
+
+.search-container input {
+    border: none;
+    outline: none;
+    padding: 16px;
+    width: 90%;
+    background-color: inherit;
+    color: inherit;
+}
+
+.search-container input::placeholder {
+    color: #999;
+}
+
+.filter-by-region {
+    width: 250px;
+    padding: 16px;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 8px 0px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+}
+
+@media(max-width: 768px) {
+    .countries-container {
+        justify-content: center;
+    }
+
+    .title {
+        font-size: 16px;
+        
+    }
+    
+      
+
+    .header-content p {
+        font-size: 12px;
+    }
+
+    .search-filter-container {
+        flex-direction: column;
+    }
+    
 }
