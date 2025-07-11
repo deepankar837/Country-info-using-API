@@ -1,53 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Country</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+  <title>Country Details</title>
+
+  <!-- Font Awesome Icons -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
     integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link href="https://fonts.googleapis.com/css?family=Nunito:300,regular,500,600,700,800" rel="stylesheet" />
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+
+  <!-- Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Nunito:300,regular,500,600,700,800"
+    rel="stylesheet"
+  />
+
+  <!-- Styles -->
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="country.css" />
   <script src="country.js" defer></script>
 </head>
-
 <body>
+  <!-- Header -->
   <header class="header-container">
     <div class="header-content">
-      <h2 class="title"><a href="/">Where in the world?</a></h2>
-      <p class="theme-changer"><i class="fa-regular fa-moon"></i>&nbsp;&nbsp;Dark Mode</p>
+      <h2 class="title">
+        <a href="/">Country Finder</a>
+      </h2>
+      <button class="theme-changer">
+        <i class="fa-regular fa-moon"></i>&nbsp; Dark Mode
+      </button>
     </div>
   </header>
+
+  <!-- Main Content -->
   <main>
-    <div class="country-details-container">
-      <span class="back-button" onclick="history.back()">
+    <section class="country-details-container">
+      <!-- Back Button -->
+      <button class="back-button" onclick="history.back()">
         <i class="fa-solid fa-arrow-left"></i>&nbsp; Back
-      </span>
+      </button>
+
+      <!-- Country Details -->
       <div class="country-details">
-        <img src="" alt="" />
+        <!-- Flag -->
+        <div class="flag-container">
+          <img src="" alt="Country Flag" class="country-flag" />
+        </div>
+
+        <!-- Text Details -->
         <div class="details-text-container">
-          <h1>Iceland</h1>
-          <div class="details-text">
-            <p><b>Native Name: </b><span class="native-name"></span></p>
-            <p><b>Population: </b><span class="population"></span></p>
-            <p><b>Region: </b><span class="region"></span></p>
-            <p><b>Sub Region: </b><span class="sub-region"></span></p>
-            <p><b>Capital: </b><span class="capital"></span></p>
-            <p>
-              <b>Top Level Domain: </b><span class="top-level-domain"></span>
-            </p>
-            <p><b>Currencies: </b><span class="currencies"></span></p>
-            <p><b>Languages: </b><span class="languages"></span></p>
+          <h1 class="country-name">Iceland</h1>
+
+          <div class="details-columns">
+            <!-- Column 1 -->
+            <div class="details-column">
+              <p><strong>Native Name:</strong> <span class="native-name"></span></p>
+              <p><strong>Population:</strong> <span class="population"></span></p>
+              <p><strong>Region:</strong> <span class="region"></span></p>
+              <p><strong>Sub Region:</strong> <span class="sub-region"></span></p>
+              <p><strong>Capital:</strong> <span class="capital"></span></p>
+            </div>
+
+            <!-- Column 2 -->
+            <div class="details-column">
+              <p><strong>Top Level Domain:</strong> <span class="top-level-domain"></span></p>
+              <p><strong>Currencies:</strong> <span class="currencies"></span></p>
+              <p><strong>Languages:</strong> <span class="languages"></span></p>
+            </div>
           </div>
-          <div class="border-countries"><b>Border Countries: </b>&nbsp;</div>
+
+          <!-- Border Countries -->
+          <div class="border-countries">
+            <strong>Border Countries:</strong>
+            <div class="border-buttons-container">
+              <!-- Border country buttons will be added dynamically -->
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   </main>
 </body>
-
 </html>
